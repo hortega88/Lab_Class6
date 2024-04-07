@@ -1,0 +1,114 @@
+.menu-title {
+  display: block;
+  width: 150px;
+  height: 40px;
+  padding: 12px 0 0;
+  background: #9dc852;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s background-color;
+}
+
+.menu-title:before {
+  content: "";
+  display: block;
+  height: 0;
+  border-top: 5px solid #9dc852;
+  border-left: ($menu_WIDTH / 2) solid transparent;
+  border-right: ($menu_WIDTH / 2) solid transparent;
+  border-bottom: 0 solid #dddddd;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 101;
+  transition: 0.2s 0.2s border-top ease-out, 0.3s border-top-color;
+}
+
+.menu-title:hover {
+  background: #8db842;
+}
+.menu-title:hover:before {
+  border-top-color: #8db842;
+}
+
+.menu:hover > .menu-title:before {
+  border-top-width: 0;
+  transition: 0.2s border-top-width ease-in, 0.3s border-top-color;
+}
+
+.menu-title:after {
+  content: "";
+  display: block;
+  height: 0;
+  border-left: ($menu_WIDTH / 2) solid transparent;
+  border-right: ($menu_WIDTH / 2) solid transparent;
+  border-bottom: 0 solid #ebebeb;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  transition: 0.2s border-bottom ease-in;
+}
+
+.menu:hover > .menu-title:after {
+  border-bottom-width: 5px;
+  transition: 0.2s 0.2s border-bottom-width ease-out;
+}
+
+.hList {
+  //overflow: hidden;
+}
+
+.hList > * {
+  float: left;
+}
+
+.hList > * + * {
+  margin-left: 0;
+}
+* {
+  margin: 2;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Courier New", sans-serif;
+}
+
+.headernav {
+  border: 1px solid transparent;
+  background-color: deepskyblue;
+}
+
+.section1a1 {
+  border: 1px solid black;
+  background-color: beige;
+}
+
+.section1listitem {
+  border: 1px solid black;
+  background-color: beige;
+}
+
+.article2 {
+  border: 1px solid black;
+  background-color: beige;
+}
+
+.p2 {
+  padding: 2.5 em 1.7em;
+  text-align: justify;
+  border: 1px solid black;
+  background-color: beige;
+}
+
+.footer {
+  border: 1px solid white;
+  background-color: pink;
+  text-decoration-color: white;
+}
+
+title1 {
+  padding: auto;
+}
